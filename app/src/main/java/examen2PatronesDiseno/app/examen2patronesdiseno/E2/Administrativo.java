@@ -27,7 +27,12 @@ public class Administrativo {
     }
 
     @override
+    public void send (String msg, String tipoMensaje){
+        mediator.send(msg, tipoMensaje, this);
+    }
 
-    
-    
+    @Override
+    public void receive(String msg){
+        System.out.println("El Mensaje fue recibido por un administrativo " + nombre " -> " + msg);
+    }
 }
