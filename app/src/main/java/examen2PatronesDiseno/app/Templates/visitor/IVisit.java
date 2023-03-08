@@ -1,4 +1,4 @@
-package visitor.tempalte;
+package examen2PatronesDiseno.app.Templates.visitor;
 
 public interface IVisit {
     void visit(ConcreteObject1 concreteObject1);
