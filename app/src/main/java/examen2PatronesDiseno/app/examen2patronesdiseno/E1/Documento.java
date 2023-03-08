@@ -21,5 +21,7 @@ public class Documento {
         this.state = state;
     }
     
-    
+    public void showInfo(){
+        System.out.println(nuevoCambio);
+    }
 }
