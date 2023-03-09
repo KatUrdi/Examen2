@@ -1,6 +1,6 @@
 package examen2PatronesDiseno.app.examen2patronesdiseno.E2;
 
-public class Administrativo {
+public class Administrativo extends Persona {
 
     private String nombre;
     public String getNombre() {
@@ -26,13 +26,16 @@ public class Administrativo {
 
     }
 
-    @override
+    @Override
     public void send (String msg, String tipoMensaje){
         mediator.send(msg, tipoMensaje, this);
     }
 
     @Override
     public void receive(String msg){
-        System.out.println("El Mensaje fue recibido por un administrativo " + nombre " -> " + msg);
+        System.out.println("El Mensaje fue recibido por un administrativo " + nombre + "->" + msg);
+    }
+
+    public void setTipoPersona(String string) {
     }
 }

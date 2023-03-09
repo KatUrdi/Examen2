@@ -1,6 +1,6 @@
 package examen2PatronesDiseno.app.examen2patronesdiseno.E2;
 
-public public static void main(String [] args) {
+public class Client{public static void main(String [] args) {
     ConcreteChat chat = new ConcreteChat();
 
     Estudiante e1 = new Estudiante(chat);
@@ -34,6 +34,17 @@ public public static void main(String [] args) {
     chat.addToChat(a1);
     chat.addToChat(a2);
 
-    // 
-    
+    // Los estudiantes podran decidir si su mensaje es enviado a todos, o solo a los docentes o solo a los administrativos
+
+    e1.send("este mensaje es para todos" , "grupal");
+    e1.send("este mensaje es para los docentes" , "docentes");
+    //aqui solo los docentes envian ensajes a  estudiantes
+
+    d2.send("este mensaje es para los estudiantes" , "estudiantes");
+
+    // los admins envian mensajes a todos
+
+    a2.send("este mensaje es para todos" , "grupal");
+
+} 
 }
